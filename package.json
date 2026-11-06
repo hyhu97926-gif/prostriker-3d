@@ -1,0 +1,23 @@
+{
+  "name": "pro-striker-3d",
+  "productName": "Pro Striker 3D",
+  "version": "1.1.0",
+  "description": "3D football game",
+  "author": "MysteryCraft",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.mysterycraft.prostriker3d",
+    "productName": "ProStriker3D",
+    "files": ["main.js", "index.html", "three.min.js", "icon.png", "logos/**/*"],
+    "win": { "target": "portable", "signAndEditExecutable": false },
+    "portable": { "artifactName": "ProStriker3D.exe" }
+  }
+}
